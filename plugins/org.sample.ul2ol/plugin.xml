@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="org.sample.ul2ol">
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+    <feature extension="depend.preprocess.post" value="ul2ol"/>
+</plugin>

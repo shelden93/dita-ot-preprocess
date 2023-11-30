@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ul2ol" basedir=".">
+
+    <target name="ul2ol" description="Convert DITA unordered lists to ordered lists">
+        <condition property="dita.preprocess.reloadstylesheet.ul2ol" value="${dita.preprocess.reloadstylesheet}">
+            <not>
+                <isset property="dita.preprocess.reloadstylesheet.ul2ol"/>
+            </not>
+        </condition>
+
+        <pipeline taskname="ul2ol">
+            <xslt basedir="${dita.temp.dir}" includesfile="${dita.temp.dir}/${fullditatopicfile}"
+                  classpathref="dost.class.path" filenameparameter="FILENAME"
+                  reloadstylesheet="${dita.preprocess.reloadstylesheet.ul2ol}"
+                  style="${dita.dir}/plugins/org.sample.ul2ol/xsl/ul2ol.xsl">
+
+                <xmlcatalog refid="dita.catalog"/>
+            </xslt>
+        </pipeline>
+    </target>
+</project>
