@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+
+    <!-- Custom attributes entry -->
+    <uri name="cfg:fo/attrs/custom.xsl" uri="fo/attrs/custom.xsl"/>
+
+</catalog>
